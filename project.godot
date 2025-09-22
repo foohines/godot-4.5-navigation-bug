@@ -13,4 +13,5 @@ config_version=5
 config/name="navigation-bug-4.5"
 run/main_scene="uid://dco5j2i77p2rx"
 config/features=PackedStringArray("4.5", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
