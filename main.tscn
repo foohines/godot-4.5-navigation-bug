@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dco5j2i77p2rx"]
+[gd_scene load_steps=7 format=3 uid="uid://dco5j2i77p2rx"]
 
 [ext_resource type="Script" uid="uid://cs64whj2dlicq" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://d0y2kujtael2l" path="res://icon.svg" id="1_ig7tw"]
@@ -10,6 +10,12 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(-2050, -2051, 2570, -2061, 2560, 2569, -2059, 2579)])
 source_geometry_mode = 2
 source_geometry_group_name = &"navigation-obstacle"
+
+[sub_resource type="Gradient" id="Gradient_h2yge"]
+colors = PackedColorArray(0.9999681, 0.22960293, 0.17424399, 1, 0.8109796, 0.35946423, 0.33521026, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1bvp3"]
+gradient = SubResource("Gradient_h2yge")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
@@ -41,3 +47,8 @@ polygon = PackedVector2Array(-67, -19.5, 67, -19.5, 67, 111, 17, 111, 17, 110.5,
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 position = Vector2(636, 155.5)
 polygon = PackedVector2Array(-119, -19.5, 119, -19.5, 119, 111, 61, 111, 61, 110.5, 117, 110.5, 117, -17.5, -117, -17.5, -117, 110.5, -60, 110.5, -60, 111, -119, 111)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(353, 201)
+scale = Vector2(0.16015624, 43.500004)
+texture = SubResource("GradientTexture1D_1bvp3")
